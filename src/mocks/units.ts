@@ -1283,7 +1283,7 @@ export const units: IUnitResponse = {
       },
       {
         "id": 59,
-        "name": "Camel",
+        "name": "Camel Rider",
         "description": "Excels at killing other mounted units. (not classified as cavalry)",
         "expansion": "Age of Kings",
         "age": "Castle",
@@ -1305,7 +1305,7 @@ export const units: IUnitResponse = {
       },
       {
         "id": 60,
-        "name": "Heavy Camel",
+        "name": "Heavy Camel Rider",
         "description": "Upgraded Camel. Attack bonus vs. cavalry. (not classified as cavalry)",
         "expansion": "Age of Kings",
         "age": "Imperial",
