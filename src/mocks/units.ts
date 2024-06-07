@@ -23,7 +23,8 @@ export const units: IUnitResponse = {
         "range": 30,
         "attack": 4,
         "armor": "0/0",
-        "accuracy": "80%"
+        "accuracy": "80%",
+        "image": "archer"
       },
       {
         "id": 2,
@@ -47,7 +48,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+3 spearmen"
         ],
-        "accuracy": "85%"
+        "accuracy": "85%",
+        "image": "crossbowman"
       },
       {
         "id": 3,
@@ -71,7 +73,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+3 spearmen"
         ],
-        "accuracy": "90%"
+        "accuracy": "90%",
+        "image": "arbalets"
       },
       {
         "id": 4,
@@ -96,7 +99,8 @@ export const units: IUnitResponse = {
           "+2 spearmen"
         ],
         "search_radius": 6,
-        "accuracy": "50%"
+        "accuracy": "50%",
+        "image":"cavalary-archer"
       },
       {
         "id": 5,
@@ -120,7 +124,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+2 spearmen"
         ],
-        "accuracy": "50%"
+        "accuracy": "50%",
+        "image":"heavy-cavalary-archer"
       },
       {
         "id": 6,
@@ -146,7 +151,8 @@ export const units: IUnitResponse = {
           "+10 infantry",
           "+2 rams"
         ],
-        "accuracy": "65%"
+        "accuracy": "65%",
+        "image":"hand-cannoneer"
       },
       {
         "id": 7,
@@ -171,7 +177,8 @@ export const units: IUnitResponse = {
           "+3 spearmen",
           "+3 archers/hand cannon/skirms/conquistadors"
         ],
-        "accuracy": "90%"
+        "accuracy": "90%",
+        "image":"skirmisher"
       },
       {
         "id": 8,
@@ -197,7 +204,8 @@ export const units: IUnitResponse = {
           "+4 archers/hand cannon/skirms/conquistadors",
           "+6 against cavalry archers"
         ],
-        "accuracy": "90%"
+        "accuracy": "90%",
+        "image":"elite-skirmisher"
       },
       {
         "id": 9,
@@ -215,7 +223,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+8 monks",
           "+3 siege"
-        ]
+        ],
+        "image":"eagle-warrior"
       },
       {
         "id": 10,
@@ -239,7 +248,8 @@ export const units: IUnitResponse = {
           "+3 siege",
           "+2 cavalry",
           "+1 ship/camel"
-        ]
+        ],
+        "image":"eagle-warrior"
       },
       {
         "id": 11,
@@ -263,7 +273,8 @@ export const units: IUnitResponse = {
           "+5 siege",
           "+4 cavalry",
           "+2 ship/camel"
-        ]
+        ],
+        "image":"elite-eagle-warrior"
       },
       {
         "id": 12,
@@ -288,7 +299,8 @@ export const units: IUnitResponse = {
           "+30 war elephants",
           "+15 cavalry",
           "+7 camels/ships"
-        ]
+        ],
+        "image":"spearman"
       },
       {
         "id": 13,
@@ -313,7 +325,8 @@ export const units: IUnitResponse = {
           "+47 war elephants",
           "+22 cavalry",
           "+11 camels/ships"
-        ]
+        ],
+        "image":"pikeman"
       },
       {
         "id": 14,
@@ -338,7 +351,8 @@ export const units: IUnitResponse = {
           "+60 war elephants",
           "+32 cavalry",
           "+16 camels/ships"
-        ]
+        ],
+        "image":"halberdier"
       },
       {
         "id": 15,
@@ -356,7 +370,8 @@ export const units: IUnitResponse = {
         "line_of_sight": 4,
         "hit_points": 40,
         "attack": 4,
-        "armor": "0/1"
+        "armor": "0/1",
+        "image":"militia"
       },
       {
         "id": 16,
@@ -378,7 +393,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+2 eagles",
           "+1 buildings"
-        ]
+        ],
+        "image":"man-at-arms"
       },
       {
         "id": 17,
@@ -400,7 +416,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+4 eagles",
           "+2 buildings"
-        ]
+        ],
+        "image":"long-swordman"
       },
       {
         "id": 18,
@@ -423,7 +440,8 @@ export const units: IUnitResponse = {
           "+6 eagles",
           "+3 buildings"
         ],
-        "search_radius": 4
+        "search_radius": 4,
+        "image":"two-handed-swordman"
       },
       {
         "id": 19,
@@ -446,7 +464,8 @@ export const units: IUnitResponse = {
           "+6 eagles",
           "+3 buildings"
         ],
-        "search_radius": 5
+        "search_radius": 5,
+        "image":"champion"
       },
       {
         "id": 20,
@@ -461,7 +480,8 @@ export const units: IUnitResponse = {
         "movement_rate": 1.32,
         "line_of_sight": 6,
         "hit_points": 75,
-        "armor": "0/0"
+        "armor": "0/0",
+        "image":"king"
       },
       {
         "id": 21,
@@ -485,7 +505,8 @@ export const units: IUnitResponse = {
           "+60 siege",
           "+900 walls & gates"
         ],
-        "blast_radius": 0.5
+        "blast_radius": 0.5,
+        "image":"petard"
       },
       {
         "id": 22,
@@ -508,7 +529,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+250 buildings"
         ],
-        "accuracy": "15%"
+        "accuracy": "15%",
+        "image":"trebuchet-unpacked"
       },
       {
         "id": 23,
@@ -528,7 +550,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+250 buildings"
         ],
-        "accuracy": "15% (80% if walls/towers/buildings with target radius 1)"
+        "accuracy": "15% (80% if walls/towers/buildings with target radius 1)",
+        "image":"trebuchet"
       },
       {
         "id": 24,
@@ -555,7 +578,8 @@ export const units: IUnitResponse = {
           "+15 cavalry",
           "+40 siege"
         ],
-        "accuracy": "50%"
+        "accuracy": "50%",
+        "image": "cannon-galleon"
       },
       {
         "id": 25,
@@ -582,7 +606,8 @@ export const units: IUnitResponse = {
           "+15 cavalry",
           "+40 siege"
         ],
-        "accuracy": "50%"
+        "accuracy": "50%",
+        "image": "elite-cannon-galleon"
       },
       {
         "id": 26,
@@ -606,7 +631,8 @@ export const units: IUnitResponse = {
         "armor_bonus": [
           "+3 ships/camel"
         ],
-        "blast_radius": 2.5
+        "blast_radius": 2.5,
+        "image": "demolition-ship"
       },
       {
         "id": 27,
@@ -631,7 +657,8 @@ export const units: IUnitResponse = {
           "+5 ships/camel"
         ],
         "search_radius": 5,
-        "blast_radius": 3.5
+        "blast_radius": 3.5,
+        "image": "heavy-demolition-ship"
       },
       {
         "id": 28,
@@ -659,7 +686,8 @@ export const units: IUnitResponse = {
         ],
         "armor_bonus": [
           "+5 ships/camel"
-        ]
+        ],
+        "image": "fire-ship"
       },
       {
         "id": 29,
@@ -687,7 +715,8 @@ export const units: IUnitResponse = {
         ],
         "armor_bonus": [
           "+7 ships/camel"
-        ]
+        ],
+        "image": "fast-fire-ship"
       },
       {
         "id": 30,
@@ -711,7 +740,8 @@ export const units: IUnitResponse = {
           "+6 buildings",
           "+8 ships/camels",
           "+3 rams"
-        ]
+        ],
+        "image": "galley"
       },
       {
         "id": 31,
@@ -735,7 +765,8 @@ export const units: IUnitResponse = {
           "+7 buildings",
           "+9 ships/camels",
           "+4 rams"
-        ]
+        ],
+        "image": "war-galley"
       },
       {
         "id": 32,
@@ -759,7 +790,8 @@ export const units: IUnitResponse = {
           "+8 buildings",
           "+11 ships/camels",
           "+4 rams"
-        ]
+        ],
+        "image": "galleon"
       },
       {
         "id": 33,
@@ -785,7 +817,8 @@ export const units: IUnitResponse = {
           "+9 ships",
           "+4 rams"
         ],
-        "accuracy": "100%"
+        "accuracy": "100%",
+        "image": "longboat"
       },
       {
         "id": 34,
@@ -810,7 +843,8 @@ export const units: IUnitResponse = {
           "+11 ships",
           "+4 rams"
         ],
-        "accuracy": "100%"
+        "accuracy": "100%",
+        "image": "elite-long-boat"
       },
       {
         "id": 35,
@@ -826,7 +860,8 @@ export const units: IUnitResponse = {
         "line_of_sight": 5,
         "hit_points": 60,
         "armor": "0/6",
-        "search_radius": 12
+        "search_radius": 12,
+        "image": "fishing-ship"
       },
       {
         "id": 36,
@@ -842,7 +877,8 @@ export const units: IUnitResponse = {
         "movement_rate": 1.32,
         "line_of_sight": 6,
         "hit_points": 80,
-        "armor": "0/6"
+        "armor": "0/6",
+        "image": "trade-cog"
       },
       {
         "id": 37,
@@ -857,7 +893,8 @@ export const units: IUnitResponse = {
         "movement_rate": 1.45,
         "line_of_sight": 5,
         "hit_points": 100,
-        "armor": "4/8"
+        "armor": "4/8",
+        "image": "transport-ship"
       },
       {
         "id": 38,
@@ -880,7 +917,8 @@ export const units: IUnitResponse = {
         "armor_bonus": [
           "+8 ships"
         ],
-        "blast_radius": 0.5
+        "blast_radius": 0.5,
+        "image": "turtle-ship"
       },
       {
         "id": 39,
@@ -904,7 +942,8 @@ export const units: IUnitResponse = {
           "+11 ships",
           "+1 turtle ship armor"
         ],
-        "blast_radius": 0.5
+        "blast_radius": 0.5,
+        "image": "elite-turtle-ship"
       },
       {
         "id": 40,
@@ -918,7 +957,8 @@ export const units: IUnitResponse = {
         "line_of_sight": 4,
         "hit_points": 75,
         "attack": 7,
-        "armor": "0/0"
+        "armor": "0/0",
+        "image": "wild-boar"
       },
       {
         "id": 41,
@@ -930,7 +970,8 @@ export const units: IUnitResponse = {
         "movement_rate": 0.737,
         "line_of_sight": 2,
         "hit_points": 5,
-        "armor": "0/0"
+        "armor": "0/0",
+        "image": "deer"
       },
       {
         "id": 42,
@@ -942,7 +983,8 @@ export const units: IUnitResponse = {
         "movement_rate": 1.2,
         "line_of_sight": 2,
         "hit_points": 50,
-        "armor": "0/0"
+        "armor": "0/0",
+        "image": "horse"
       },
       {
         "id": 43,
@@ -954,7 +996,8 @@ export const units: IUnitResponse = {
         "movement_rate": 0.7,
         "line_of_sight": 3,
         "hit_points": 7,
-        "armor": "0/0"
+        "armor": "0/0",
+        "image": "sheep"
       },
       {
         "id": 44,
@@ -966,7 +1009,8 @@ export const units: IUnitResponse = {
         "movement_rate": 0.7,
         "line_of_sight": 3,
         "hit_points": 7,
-        "armor": "0/0"
+        "armor": "0/0",
+        "image": "turkey"
       },
       {
         "id": 45,
@@ -980,7 +1024,8 @@ export const units: IUnitResponse = {
         "line_of_sight": 12,
         "hit_points": 25,
         "attack": 3,
-        "armor": "0/0"
+        "armor": "0/0",
+        "image": "wolf"
       },
       {
         "id": 46,
@@ -994,7 +1039,8 @@ export const units: IUnitResponse = {
         "line_of_sight": 12,
         "hit_points": 25,
         "attack": 3,
-        "armor": "0/0"
+        "armor": "0/0",
+        "image": "jaguar"
       },
       {
         "id": 47,
@@ -1010,7 +1056,8 @@ export const units: IUnitResponse = {
         "movement_rate": 1,
         "line_of_sight": 7,
         "hit_points": 70,
-        "armor": "0/0"
+        "armor": "0/0",
+        "image": "trade-cart"
       },
       {
         "id": 48,
@@ -1026,7 +1073,8 @@ export const units: IUnitResponse = {
         "line_of_sight": 9,
         "hit_points": 30,
         "range": "7 (4 heal range)",
-        "armor": "0/0"
+        "armor": "0/0",
+        "image": "missionary"
       },
       {
         "id": 49,
@@ -1043,7 +1091,8 @@ export const units: IUnitResponse = {
         "line_of_sight": 11,
         "hit_points": 30,
         "range": "9 (4 heal range)",
-        "armor": "0/0"
+        "armor": "0/0",
+        "image": "monk"
       },
       {
         "id": 50,
@@ -1071,7 +1120,8 @@ export const units: IUnitResponse = {
           "+40 stone defense"
         ],
         "accuracy": "92%",
-        "blast_radius": 0.5
+        "blast_radius": 0.5,
+        "image": "bombard-cannon"
       },
       {
         "id": 51,
@@ -1095,7 +1145,8 @@ export const units: IUnitResponse = {
           "+35 buildings",
           "+12 siege"
         ],
-        "blast_radius": 1
+        "blast_radius": 1,
+        "image": "mangonel"
       },
       {
         "id": 52,
@@ -1119,7 +1170,8 @@ export const units: IUnitResponse = {
           "+45 buildings",
           "+12 siege"
         ],
-        "blast_radius": 1.25
+        "blast_radius": 1.25,
+        "image": "onager"
       },
       {
         "id": 53,
@@ -1143,7 +1195,8 @@ export const units: IUnitResponse = {
           "+60 buildings",
           "+12 siege"
         ],
-        "blast_radius": 1.5
+        "blast_radius": 1.5,
+        "image": "siege-onager"
       },
       {
         "id": 54,
@@ -1169,7 +1222,8 @@ export const units: IUnitResponse = {
         ],
         "armor_bonus": [
           "-3 melee"
-        ]
+        ],
+        "image": "battering-ram"
       },
       {
         "id": 55,
@@ -1197,7 +1251,8 @@ export const units: IUnitResponse = {
           "-3 melee",
           "+1 ram armor"
         ],
-        "blast_radius": 1.5
+        "blast_radius": 1.5,
+        "image": "capped-ram"
       },
       {
         "id": 56,
@@ -1225,7 +1280,8 @@ export const units: IUnitResponse = {
           "-3 melee",
           "+2 ram armor"
         ],
-        "blast_radius": 2
+        "blast_radius": 2,
+        "image": "siege-ram"
       },
       {
         "id": 57,
@@ -1252,7 +1308,8 @@ export const units: IUnitResponse = {
           "+0 melee",
           "+1 rams"
         ],
-        "accuracy": "100%"
+        "accuracy": "100%",
+        "image": "scorpion"
       },
       {
         "id": 58,
@@ -1279,7 +1336,8 @@ export const units: IUnitResponse = {
           "+0 melee",
           "+2 rams"
         ],
-        "accuracy": "100%"
+        "accuracy": "100%",
+        "image": "heavy-scorpion"
       },
       {
         "id": 59,
@@ -1301,7 +1359,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+10 against cavalry",
           "+5 ships/camels"
-        ]
+        ],
+        "image": "camel"
       },
       {
         "id": 60,
@@ -1324,7 +1383,8 @@ export const units: IUnitResponse = {
           "+18 against cavalry",
           "+9 ships/camels"
         ],
-        "search_radius": 4
+        "search_radius": 4,
+        "image": "heavy-camel"
       },
       {
         "id": 61,
@@ -1342,7 +1402,8 @@ export const units: IUnitResponse = {
         "line_of_sight": 4,
         "hit_points": 100,
         "attack": 10,
-        "armor": "2/2"
+        "armor": "2/2",
+        "image":"knight"
       },
       {
         "id": 62,
@@ -1360,7 +1421,8 @@ export const units: IUnitResponse = {
         "line_of_sight": 4,
         "hit_points": 120,
         "attack": 12,
-        "armor": "2/2"
+        "armor": "2/2",
+        "image":"cavalier"
       },
       {
         "id": 63,
@@ -1378,7 +1440,8 @@ export const units: IUnitResponse = {
         "line_of_sight": 5,
         "hit_points": 160,
         "attack": 14,
-        "armor": "2/3"
+        "armor": "2/3",
+        "image":"paladin"
       },
       {
         "id": 64,
@@ -1395,7 +1458,8 @@ export const units: IUnitResponse = {
         "armor": "0/2",
         "attack_bonus": [
           "+6 monks"
-        ]
+        ],
+        "image":"scout-cavalary"
       },
       {
         "id": 65,
@@ -1415,7 +1479,8 @@ export const units: IUnitResponse = {
         "armor": "0/2",
         "attack_bonus": [
           "+6 monks"
-        ]
+        ],
+        "image":"scout-cavalary"
       },
       {
         "id": 66,
@@ -1435,7 +1500,8 @@ export const units: IUnitResponse = {
         "armor": "0/2",
         "attack_bonus": [
           "+10 monks"
-        ]
+        ],
+        "image":"light-cavalary"
       },
       {
         "id": 67,
@@ -1455,7 +1521,8 @@ export const units: IUnitResponse = {
         "armor": "0/2",
         "attack_bonus": [
           "+12 monks"
-        ]
+        ],
+        "image":"hussar"
       },
       {
         "id": 68,
@@ -1476,7 +1543,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+3 buildings",
           "+6 stone defense"
-        ]
+        ],
+        "image":"villager"
       },
       {
         "id": 69,
@@ -1498,7 +1566,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+2 eagles",
           "+2 buildings"
-        ]
+        ],
+        "image":"berserk"
       },
       {
         "id": 70,
@@ -1520,7 +1589,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+3 eagles",
           "+3 buildings"
-        ]
+        ],
+        "image":"berserk"
       },
       {
         "id": 71,
@@ -1544,7 +1614,8 @@ export const units: IUnitResponse = {
         ],
         "armor_bonus": [
           "+12 cavalry"
-        ]
+        ],
+        "image":"cataphract"
       },
       {
         "id": 72,
@@ -1568,7 +1639,8 @@ export const units: IUnitResponse = {
         ],
         "armor_bonus": [
           "+16 cavalry"
-        ]
+        ],
+        "image":"cataphract"
       },
       {
         "id": 73,
@@ -1592,7 +1664,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+2 spearmen"
         ],
-        "accuracy": "85%"
+        "accuracy": "85%",
+        "image":"cho-ko-nu"
       },
       {
         "id": 74,
@@ -1616,7 +1689,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+2 spearmen"
         ],
-        "accuracy": "85%"
+        "accuracy": "85%",
+        "image":"cho-ko-nu"
       },
       {
         "id": 75,
@@ -1640,7 +1714,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+4 rams"
         ],
-        "accuracy": "65%"
+        "accuracy": "65%",
+        "image":"conquistador"
       },
       {
         "id": 76,
@@ -1665,7 +1740,8 @@ export const units: IUnitResponse = {
           "+6 ram",
           "+2 buildings"
         ],
-        "accuracy": "70%"
+        "accuracy": "70%",
+        "image":"conquistador"
       },
       {
         "id": 77,
@@ -1688,7 +1764,8 @@ export const units: IUnitResponse = {
           "+2 eagles",
           "+2 buildings",
           "+6 archers/hand cannoneers"
-        ]
+        ],
+        "image":"huskarl"
       },
       {
         "id": 78,
@@ -1711,7 +1788,8 @@ export const units: IUnitResponse = {
           "+3 eagles",
           "+3 buildings",
           "+10 archers/hand cannoneers"
-        ]
+        ],
+        "image":"huskarl"
       },
       {
         "id": 79,
@@ -1734,7 +1812,8 @@ export const units: IUnitResponse = {
           "+12 eagles",
           "+2 buildings",
           "+10 infantry"
-        ]
+        ],
+        "image":"jaguar-warrior"
       },
       {
         "id": 80,
@@ -1757,7 +1836,8 @@ export const units: IUnitResponse = {
           "+12 eagles",
           "+2 buildings",
           "+10 infantry"
-        ]
+        ],
+        "image":"jaguar-warrior"
       },
       {
         "id": 81,
@@ -1781,7 +1861,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+2 rams"
         ],
-        "accuracy": "50%"
+        "accuracy": "50%",
+        "image": "jannissary"
       },
       {
         "id": 82,
@@ -1804,7 +1885,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+3 rams"
         ],
-        "accuracy": "50%"
+        "accuracy": "50%",
+        "image": "jannissary"
       },
       {
         "id": 83,
@@ -1828,7 +1910,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+2 spearmen"
         ],
-        "accuracy": "70%"
+        "accuracy": "70%",
+        "image": "longbowman"
       },
       {
         "id": 84,
@@ -1852,7 +1935,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+2 spearmen"
         ],
-        "accuracy": "70%"
+        "accuracy": "70%",
+        "image": "longbowman"
       },
       {
         "id": 85,
@@ -1878,7 +1962,8 @@ export const units: IUnitResponse = {
         ],
         "armor_bonus": [
           "+11 cavalry"
-        ]
+        ],
+        "image": "mameluke"
       },
       {
         "id": 86,
@@ -1903,7 +1988,8 @@ export const units: IUnitResponse = {
         ],
         "armor_bonus": [
           "+11 cavalry"
-        ]
+        ],
+        "image": "mameluke"
       },
       {
         "id": 87,
@@ -1929,7 +2015,8 @@ export const units: IUnitResponse = {
           "+3 siege"
         ],
         "search_radius": 5,
-        "accuracy": "95%"
+        "accuracy": "95%",
+        "image": "mangudai"
       },
       {
         "id": 88,
@@ -1954,7 +2041,8 @@ export const units: IUnitResponse = {
           "+5 siege"
         ],
         "search_radius": 6,
-        "accuracy": "95%"
+        "accuracy": "95%",
+        "image": "mangudai"
       },
       {
         "id": 89,
@@ -1979,7 +2067,8 @@ export const units: IUnitResponse = {
           "+1 infantry",
           "+2 spearmen"
         ],
-        "accuracy": "80%"
+        "accuracy": "80%",
+        "image":"plumed-archer"
       },
       {
         "id": 90,
@@ -2004,7 +2093,8 @@ export const units: IUnitResponse = {
           "+2 infantry",
           "+2 spearmen"
         ],
-        "accuracy": "80%"
+        "accuracy": "80%",
+        "image":"plumed-archer"
       },
       {
         "id": 91,
@@ -2027,7 +2117,8 @@ export const units: IUnitResponse = {
           "+2 eagles",
           "+2 buildings",
           "+10 unique units"
-        ]
+        ],
+        "image":"samurai"
       },
       {
         "id": 92,
@@ -2050,7 +2141,8 @@ export const units: IUnitResponse = {
           "+3 eagles",
           "+3 buildings",
           "+12 unique units"
-        ]
+        ],
+        "image":"samurai"
       },
       {
         "id": 93,
@@ -2074,7 +2166,8 @@ export const units: IUnitResponse = {
           "+8 buildings",
           "+12 stone defense",
           "+8 walls and gates"
-        ]
+        ],
+        "image":"tarkan"
       },
       {
         "id": 94,
@@ -2098,7 +2191,8 @@ export const units: IUnitResponse = {
           "+10 buildings",
           "+12 stone defense",
           "+10 walls and gates"
-        ]
+        ],
+        "image":"tarkan"
       },
       {
         "id": 95,
@@ -2120,7 +2214,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+4 eagles",
           "+4 buildings"
-        ]
+        ],
+        "image":"teutonic-knight"
       },
       {
         "id": 96,
@@ -2142,7 +2237,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+4 eagles",
           "+4 buildings"
-        ]
+        ],
+        "image":"teutonic-knight"
       },
       {
         "id": 97,
@@ -2166,7 +2262,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+1 eagles",
           "+1 buildings"
-        ]
+        ],
+        "image":"throwing-axeman"
       },
       {
         "id": 98,
@@ -2190,7 +2287,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+2 eagles",
           "+2 buildings"
-        ]
+        ],
+        "image":"throwing-axeman"
       },
       {
         "id": 99,
@@ -2212,7 +2310,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+7 buildings",
           "+7 stone defense"
-        ]
+        ],
+        "image":"war-elephant"
       },
       {
         "id": 100,
@@ -2234,7 +2333,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+10 buildings",
           "+10 stone defense"
-        ]
+        ],
+        "image":"war-elephant"
       },
       {
         "id": 101,
@@ -2259,7 +2359,8 @@ export const units: IUnitResponse = {
           "+5 buildings"
         ],
         "search_radius": 6,
-        "accuracy": "100%"
+        "accuracy": "100%",
+        "image":"war-wagon"
       },
       {
         "id": 102,
@@ -2284,7 +2385,8 @@ export const units: IUnitResponse = {
           "+5 buildings"
         ],
         "search_radius": 7,
-        "accuracy": "100%"
+        "accuracy": "100%",
+        "image":"war-wagon"
       },
       {
         "id": 103,
@@ -2306,7 +2408,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+2 eagles",
           "+2 buildings"
-        ]
+        ],
+        "image":"woad-raider"
       },
       {
         "id": 104,
@@ -2328,7 +2431,8 @@ export const units: IUnitResponse = {
         "attack_bonus": [
           "+3 eagles",
           "+3 buildings"
-        ]
+        ],
+        "image":"woad-raider"
       }
     ]
   }

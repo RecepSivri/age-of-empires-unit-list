@@ -26,6 +26,7 @@ export interface IUnit {
   blast_radius?: number;
   search_radius?: number;
   armor_bonus?: string[];
+  image?: string;
 }
 
 export interface IUnitResponse {
