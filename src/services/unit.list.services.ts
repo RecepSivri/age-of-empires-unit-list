@@ -6,7 +6,7 @@ import { IUnitResponse } from 'src/models/units';
 @Injectable({
   providedIn: 'root',
 })
-export class HeroService {
+export class UnitListService {
 
   constructor() { }
 
