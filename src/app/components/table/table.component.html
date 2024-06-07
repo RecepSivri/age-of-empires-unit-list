@@ -1,0 +1,9 @@
+<div class="column-layout-start-start full-width">
+    <div *ngFor="let item of data">
+        <div class="row-layout-start-start">
+            <div *ngFor="let col of column">
+                <div *ngIf="col.field" class="table-data-cell">{{item[col.field]}}</div>
+            </div>  
+        </div>
+    </div>
+</div>

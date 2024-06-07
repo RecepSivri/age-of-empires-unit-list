@@ -1,1 +1,8 @@
-<router-outlet></router-outlet>
+<div class="full-width background-theme column-layout-start-center" [ngClass]="{'background-theme': currentUrl === '/', 'background-theme-light': currentUrl !== '/'}">
+    <div class="navbar-container full-width row-layout-end-center">
+        <div class="nav-menu-items" (click) = "navigate('')"> Home</div> 
+        <div class="nav-menu-items"  (click) = "navigate('units')">Units</div> 
+    </div>
+    <router-outlet></router-outlet>
+</div>
+

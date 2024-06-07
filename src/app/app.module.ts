@@ -9,17 +9,19 @@ import { MainComponent } from './pages/main/main.component';
 import { StoreModule } from '@ngrx/store';
 import { unitsReducer } from 'src/store/units.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { TableComponent } from './components/table/table.component';
 @NgModule({
   declarations: [
     AppComponent,
     DetailComponent,
     UnitsComponent,
     MainComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({state: unitsReducer}),
+    StoreModule.forRoot({app: unitsReducer}),
     StoreDevtoolsModule.instrument({
       maxAge: 25, 
       logOnly: !isDevMode(), 
