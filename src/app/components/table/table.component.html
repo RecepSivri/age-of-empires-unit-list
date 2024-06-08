@@ -1,8 +1,15 @@
-<div class="table-border column-layout-start-start full-width">
-  <app-header-table class="full-width" [column]="column"></app-header-table>
-  <app-body-table
-    class="full-width"
-    [data]="$tableData | async"
-    [column]="column"
-  ></app-body-table>
+<div class="column-layout-start-start full-width">
+    <div class="table-border column-layout-start-start full-width">
+        <app-header-table class="full-width" [column]="column"></app-header-table>
+        <app-body-table
+          class="full-width"
+          [data]="$tableData | async"
+          [column]="column"
+        ></app-body-table>
+      </div>
+      <div class="row-layout-end-center full-width">
+        <app-page-table [pagination] =  "$paginationData | async"></app-page-table>
+      </div>
+      
 </div>
+

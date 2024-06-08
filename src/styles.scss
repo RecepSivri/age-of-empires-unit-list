@@ -25,18 +25,18 @@
   justify-content: center;
 }
 
-.row-layout-end-start {
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-  justify-content: end;
-}
-
 .row-layout-end-center {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: end;
+}
+
+.row-layout-end-start {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: flex-end;
 }
 
 .full-width {

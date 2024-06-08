@@ -13,6 +13,7 @@ import { TableComponent } from "./components/table/table.component";
 import { BodyTableComponent } from "./components/table/body-table/body-table.component";
 import { HeaderTableComponent } from "./components/table/header-table/header-table.component";
 import { paginationReducer } from "src/store/pagination/pagination.reducer";
+import { PageTableComponent } from './components/table/page-table/page-table.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { paginationReducer } from "src/store/pagination/pagination.reducer";
     TableComponent,
     BodyTableComponent,
     HeaderTableComponent,
+    PageTableComponent,
   ],
   imports: [
     BrowserModule,
