@@ -1,19 +1,4 @@
-<div class="column-layout-start-start full-width background-color-table">
-  <div *ngFor="let item of data" class="full-width">
-    <div class="row-layout-start-start full-width border-cell-item">
-      <div *ngFor="let col of column" class="full-width" [ngStyle]="{ width: col.width ?? '100%' }">
-        <div
-          *ngIf="!col.render"
-          class="table-data-cell full-width row-layout-center-center"
-        >
-          {{ item[col.field] }}
-        </div>
-        <div
-          *ngIf="col.render"
-          class="table-data-cell full-width row-layout-center-center"
-          [innerHTML]="col.render(item[col.field])"
-        ></div>
-      </div>
-    </div>
-  </div>
+<div class="table-border column-layout-start-start full-width">
+    <app-header-table class="full-width" [column] = "column"></app-header-table>
+    <app-body-table class="full-width" [data] = "data" [column] = "column"></app-body-table>
 </div>

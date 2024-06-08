@@ -1,0 +1,5 @@
+<div class="table-header-background row-layout-start-center full-width">
+    <div *ngFor="let col of column; let i = index" class="full-width row-layout-center-center header-cell" [ngStyle]="{ width: col.width ?? '100%' }" [ngClass] = "{'border-cell-item-right': i !== column.length -1}">
+        {{col.name}}
+    </div>
+</div>
