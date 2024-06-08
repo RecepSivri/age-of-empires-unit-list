@@ -1,12 +1,11 @@
 export interface ICost {
-    Wood?: number;
-    Gold?: number;
-    Food?: number;
+  Wood?: number;
+  Gold?: number;
+  Food?: number;
 }
 
-
 export interface IUnit {
-  id: number,
+  id: number;
   name: string;
   description: string;
   expansion: string;
@@ -32,4 +31,3 @@ export interface IUnit {
 export interface IUnitResponse {
   units: IUnit[];
 }
-

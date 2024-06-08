@@ -1,3 +1,7 @@
 <div class="column-layout-start-center units-page full-width">
-    <app-table [data] = "$tableData | async" [column] = "columns"></app-table>
+  <app-table
+    [data]="$tableData | async"
+    [column]="columns"
+    style="width: 80%"
+  ></app-table>
 </div>

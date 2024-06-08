@@ -1,17 +1,15 @@
-import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { units } from 'src/mocks/units';
-import { IUnitResponse } from 'src/models/units';
+import { Injectable } from "@angular/core";
+import { Observable, of } from "rxjs";
+import { units } from "src/mocks/units";
+import { IUnitResponse } from "src/models/units";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class UnitListService {
+  constructor() {}
 
-  constructor() { }
-
-  getUnits() :Observable<IUnitResponse> {
+  getUnits(): Observable<IUnitResponse> {
     return of(units);
   }
-
 }
