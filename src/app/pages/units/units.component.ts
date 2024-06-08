@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { DomSanitizer } from "@angular/platform-browser";
 import { Store, select } from "@ngrx/store";
 import { IColumn } from "src/models/table";
-import { selectUnits } from "src/store/units.selector";
+import { selectUnits } from "src/store/units/units.selector";
 
 @Component({
   selector: "app-units",
@@ -33,10 +33,12 @@ export class UnitsComponent implements OnInit {
     },
   ];
   $tableData = this.store.pipe(select(selectUnits));
+  
   constructor(
     private store: Store,
     private sanitizer: DomSanitizer,
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 }

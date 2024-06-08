@@ -2,7 +2,7 @@
   <app-header-table class="full-width" [column]="column"></app-header-table>
   <app-body-table
     class="full-width"
-    [data]="data"
+    [data]="$tableData | async"
     [column]="column"
   ></app-body-table>
 </div>

@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from "@angular/core";
 import { UnitListService } from "src/services/unit.list.services";
 import { Store } from "@ngrx/store";
 import { IUnitResponse } from "src/models/units";
-import { getUnits } from "src/store/units.action";
+import { getUnits } from "src/store/units/units.action";
 import { NavigationEnd, Router } from "@angular/router";
 import { Subscription } from "rxjs";
 import { filter } from "rxjs/operators";
