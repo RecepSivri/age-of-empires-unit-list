@@ -19,9 +19,9 @@ export class UnitsComponent implements OnInit {
   };
 
   columns: IColumn[] = [
-    { name: "Icon", field: "image", render: this.returnImage, width: '16%' },
-    { name: "Name", field: "name", width: '28%' },
-    { name: "Age", field: "age",width: '28%' },
+    { name: "Icon", field: "image", render: this.returnImage, width: "16%" },
+    { name: "Name", field: "name", width: "28%" },
+    { name: "Age", field: "age", width: "28%" },
     {
       name: "Costs",
       field: "cost",
@@ -29,7 +29,7 @@ export class UnitsComponent implements OnInit {
         const val: string = JSON.stringify(value);
         return val.substring(1, val.length - 1);
       },
-      width: '28%'
+      width: "28%",
     },
   ];
   $tableData = this.store.pipe(select(selectUnits));

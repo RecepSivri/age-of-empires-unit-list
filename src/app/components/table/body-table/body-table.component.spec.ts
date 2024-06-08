@@ -1,16 +1,15 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { BodyTableComponent } from './body-table.component';
+import { BodyTableComponent } from "./body-table.component";
 
-describe('BodyTableComponent', () => {
+describe("BodyTableComponent", () => {
   let component: BodyTableComponent;
   let fixture: ComponentFixture<BodyTableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BodyTableComponent ]
-    })
-    .compileComponents();
+      declarations: [BodyTableComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('BodyTableComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

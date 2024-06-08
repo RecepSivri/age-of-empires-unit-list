@@ -10,8 +10,8 @@ import { StoreModule } from "@ngrx/store";
 import { unitsReducer } from "src/store/units.reducer";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { TableComponent } from "./components/table/table.component";
-import { BodyTableComponent } from './components/table/body-table/body-table.component';
-import { HeaderTableComponent } from './components/table/header-table/header-table.component';
+import { BodyTableComponent } from "./components/table/body-table/body-table.component";
+import { HeaderTableComponent } from "./components/table/header-table/header-table.component";
 @NgModule({
   declarations: [
     AppComponent,
