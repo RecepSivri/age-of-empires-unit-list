@@ -1,8 +1,8 @@
 <div *ngIf="pagination" class="row-layout-start-start pagination-container">
     <div (click) = "decrease()" class="page-item row-layout-center-center">{{'<'}}</div>
     <div *ngFor="let item of [].constructor(returnPageListSize((pagination.pageListSize * (listIndex +1)))); let i = index">
-        <div (click) = "setPage(i +1 + (pagination.pageListSize * listIndex))" class="page-item row-layout-center-center">{{i +1 + (pagination.pageListSize * listIndex)}}</div>
+        <div [ngClass]="{ 'current-page': i +1 + (pagination.pageListSize * listIndex) === current}" (click) = "setPage(i +1 + (pagination.pageListSize * listIndex))" class="page-item row-layout-center-center">{{i +1 + (pagination.pageListSize * listIndex)}}</div>
     </div>
     <div  (click) = "increase()"class="page-item row-layout-center-center">{{'>'}}</div>
-    <div class="page-item row-layout-center-center">{{pagination.size}}</div>
+    <div *ngIf="current < pagination.size" (click) = "setFinalPage(pagination.size)"class="page-item row-layout-center-center">{{pagination.size}}</div>
 </div>

@@ -11,7 +11,7 @@ import { IPaginationState } from 'src/store/pagination/pagination.state';
 export class PageTableComponent implements OnInit {
   @Input() pagination!: IPaginationState | null;
   listIndex = 0;
-  current = 0;
+  current = 1;
 
   constructor(private store: Store) { }
 
@@ -50,6 +50,15 @@ export class PageTableComponent implements OnInit {
       return 0;
     }
   }
+
+  setFinalPage = (value: number) => {
+    if(this.pagination){
+      this.listIndex = Math.floor(value / this.pagination.pageListSize);
+      this.current = value;
+      this.changePage();
+    }
+    
+  }  
 
   changePage = () => {
     this.store.dispatch(changePage({current: this.current}))
