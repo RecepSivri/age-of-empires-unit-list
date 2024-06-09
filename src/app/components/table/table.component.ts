@@ -24,6 +24,6 @@ export class TableComponent implements OnInit {
   
 
   ngOnInit(): void {
-    this.store.dispatch(setPagination({ current: this.pagination.current, pageListSize: this.pagination.pageListSize, pageSize: this.pagination.pageSize, datas: this.data }));
+    this.store.dispatch(setPagination({ current: this.pagination.current, pageListSize: this.pagination.pageListSize, pageSize: this.pagination.pageSize, filteredDatas: this.data }));
   }
 }

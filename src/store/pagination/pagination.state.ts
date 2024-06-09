@@ -7,4 +7,5 @@ export interface IPaginationState {
   pageListSize: Readonly<number>;
   datas: IUnit[];
   length: number;
+  filteredDatas: IUnit[];
 }

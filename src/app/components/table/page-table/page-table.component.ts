@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { changePage } from 'src/store/pagination/pagination.action';
 import { IPaginationState } from 'src/store/pagination/pagination.state';
 
 @Component({
@@ -11,7 +13,7 @@ export class PageTableComponent implements OnInit {
   listIndex = 0;
   current = 0;
 
-  constructor() { }
+  constructor(private store: Store) { }
 
   ngOnInit(): void {
   }
@@ -50,7 +52,7 @@ export class PageTableComponent implements OnInit {
   }
 
   changePage = () => {
-    console.log(this.current)
+    this.store.dispatch(changePage({current: this.current}))
   }
 
 }
