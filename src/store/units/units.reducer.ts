@@ -9,5 +9,5 @@ export const initialState: Readonly<IUnitState> = {
 
 export const unitsReducer = createReducer(
   initialState,
-  on(getUnits, (state, { units }) => ({ ...state, units: units })),
+  on(getUnits, (state, { units }) => ({ ...state, units: units, filteredunits: units })),
 );

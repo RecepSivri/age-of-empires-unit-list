@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { DomSanitizer } from "@angular/platform-browser";
 import { Store, select } from "@ngrx/store";
 import { IColumn, IPaginationTable } from "src/models/table";
-import { selectUnits } from "src/store/units/units.selector";
+import { selectFilteredUnits, selectUnits } from "src/store/units/units.selector";
 
 @Component({
   selector: "app-units",
@@ -34,10 +34,10 @@ export class UnitsComponent implements OnInit {
   ];
   paginationParam: IPaginationTable = {
     current: 1,
-    pageSize: 6,
+    pageSize: 10,
     pageListSize: 5
   }
-  $tableData = this.store.pipe(select(selectUnits));
+  $tableData = this.store.pipe(select(selectFilteredUnits));
   
   constructor(
     private store: Store,
