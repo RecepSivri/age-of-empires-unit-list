@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { DomSanitizer } from "@angular/platform-browser";
 import { Store, select } from "@ngrx/store";
-import { IColumn } from "src/models/table";
+import { IColumn, IPaginationTable } from "src/models/table";
 import { selectUnits } from "src/store/units/units.selector";
 
 @Component({
@@ -32,6 +32,11 @@ export class UnitsComponent implements OnInit {
       width: "28%",
     },
   ];
+  paginationParam: IPaginationTable = {
+    current: 1,
+    pageSize:15,
+    pageListSize: 5
+  }
   $tableData = this.store.pipe(select(selectUnits));
   
   constructor(

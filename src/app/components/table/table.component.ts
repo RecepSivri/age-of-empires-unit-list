@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { Store, select } from "@ngrx/store";
-import { IColumn } from "src/models/table";
+import { IColumn, IPaginationTable } from "src/models/table";
 import { setPagination } from "src/store/pagination/pagination.action";
 import { selectDatas, selectPagination } from "src/store/pagination/pagination.selector";
 
@@ -12,6 +12,7 @@ import { selectDatas, selectPagination } from "src/store/pagination/pagination.s
 export class TableComponent implements OnInit {
   @Input() data: any;
   @Input() column: IColumn[];
+  @Input() pagination!: IPaginationTable;
   
   $tableData = this.store.pipe(select(selectDatas));
   $paginationData = this.store.pipe(select(selectPagination));
@@ -23,6 +24,6 @@ export class TableComponent implements OnInit {
   
 
   ngOnInit(): void {
-    this.store.dispatch(setPagination({ current: 1, pageListSize: 5, pageSize: 10, datas: this.data }));
+    this.store.dispatch(setPagination({ current: this.pagination.current, pageListSize: this.pagination.pageListSize, pageSize: this.pagination.pageSize, datas: this.data }));
   }
 }
