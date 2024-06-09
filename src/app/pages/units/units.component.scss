@@ -2,3 +2,41 @@
   margin-top: 100px;
   width: 100vw;
 }
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+.filter-header {
+    color: #ab9354;
+    font-family: cursive;
+    font-size: 25px;
+}
+
+.ages-filter-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 48px;
+    background-color: #e1dbbf;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-right: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.filter-item-container {
+    margin-top: -10px;
+    border: 1px solid #ccc;
+}
+
+.current-filter {
+    background-color: #bebe8c;
+}

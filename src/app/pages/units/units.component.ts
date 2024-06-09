@@ -10,6 +10,8 @@ import { selectFilteredUnits, selectUnits } from "src/store/units/units.selector
   styleUrls: ["./units.component.scss"],
 })
 export class UnitsComponent implements OnInit {
+
+  currentFilter: string = 'all'; 
   returnImage = (value: string) => {
     const htmlString = `
       <div style="margin-top: 3px">
@@ -45,5 +47,9 @@ export class UnitsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+  }
+
+  selectFilter = (filter: string) => {
+    this.currentFilter = filter;
   }
 }
