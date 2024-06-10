@@ -6,7 +6,7 @@
 *.log
 /node_modules/
 month.txt
-
+coverage/
 pubspec.lock
 .c9
 .idea/
