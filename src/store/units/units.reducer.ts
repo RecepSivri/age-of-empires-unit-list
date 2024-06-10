@@ -30,10 +30,10 @@ export const initialState: Readonly<IUnitState> = {
 export const unitsReducer = createReducer(
   initialState,
   on(getUnits, (state, { units }) => ({ ...state, units: units, filteredunits: units })),
-  on(setWoodFilter, (state, { wood }) => ({ ...state, filter: {...state.filter, wood: wood}, filteredunits: filterDataByWood(state.units, {...state.filter, wood: wood})})),
+  on(setWoodFilter, (state, { wood }) => ({ ...state, filter: {...state.filter, wood: wood}, filteredunits: filterData(state.units, {...state.filter, wood: wood})})),
   on(setFoodFilter, (state, { food }) => ({ ...state, filter: {...state.filter, food: food}, filteredunits: filterData(state.units, {...state.filter, food: food})})),
   on(setGoldFilter, (state, { gold }) => ({ ...state, filter: {...state.filter, gold: gold}, filteredunits: filterData(state.units, {...state.filter, gold: gold})})),
-  on(setAgeFilter, (state, { age }) => ({ ...state, filter: {...state.filter, age: age}, filteredunits: filterDataByAge(state.units, {...state.filter, age: age})})),
+  on(setAgeFilter, (state, { age }) => ({ ...state, filter: {...state.filter, age: age}, filteredunits: filterData(state.units, {...state.filter, age: age})})),
 );
 
 const filterDataByAge = (units: Readonly<IUnit[]>, filter: IFilterState) => {
@@ -44,13 +44,26 @@ const filterDataByAge = (units: Readonly<IUnit[]>, filter: IFilterState) => {
 
 const filterDataByWood = (units: Readonly<IUnit[]>, filter: IFilterState) => {
   const {wood} = filter;
-
-  return units.filter((unit: IUnit) => {
-    return wood.checked && unit.cost?.Wood && unit.cost?.Wood <= wood.max && unit.cost?.Wood >= wood.min
-  }) 
+  return wood.checked ?units.filter((unit: IUnit) => {
+    return   unit.cost?.Wood && unit.cost?.Wood <= wood.max && unit.cost?.Wood >= wood.min
+  }): units
 }
+
+const filterDataByFood = (units: Readonly<IUnit[]>, filter: IFilterState) => {
+  const {food} = filter;
+  return food.checked ?units.filter((unit: IUnit) => {
+    return   unit.cost?.Food && unit.cost?.Food <= food.max && unit.cost?.Food >= food.min
+  }): units
+}
+
+const filterDataByGold = (units: Readonly<IUnit[]>, filter: IFilterState) => {
+  const {gold} = filter;
+  return gold.checked ?units.filter((unit: IUnit) => {
+    return   unit.cost?.Gold && unit.cost?.Gold <= gold.max && unit.cost?.Gold >= gold.min
+  }): units
+}
+
+
 const filterData = (units: Readonly<IUnit[]>, filter: IFilterState) => {
-  return units.filter((unit: IUnit) => {
-    return  filter.age === 'all' ? units : unit.age.toLowerCase() === filter.age.toLowerCase(); 
-  })
+  return filterDataByAge(filterDataByWood(filterDataByFood(filterDataByGold(units,filter),filter),filter),filter);
 }
