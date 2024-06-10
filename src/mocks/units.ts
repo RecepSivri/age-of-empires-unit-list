@@ -1554,7 +1554,7 @@ export const units: IUnitResponse = {
       armor: "0/0",
       attack_bonus: ["+2 spearmen"],
       accuracy: "85%",
-      image: "cho-ko-nu",
+      image: "chu-ko-nu",
     },
     {
       id: 74,
@@ -1577,7 +1577,7 @@ export const units: IUnitResponse = {
       armor: "0/0",
       attack_bonus: ["+2 spearmen"],
       accuracy: "85%",
-      image: "cho-ko-nu",
+      image: "chu-ko-nu",
     },
     {
       id: 75,

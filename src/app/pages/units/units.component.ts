@@ -39,7 +39,7 @@ export class UnitsComponent implements OnInit {
   paginationParam: IPaginationTable = {
     current: 1,
     pageSize: 10,
-    pageListSize: 5
+    pageListSize: 4
   }
   $tableData = this.store.pipe(select(selectFilteredUnits));
   

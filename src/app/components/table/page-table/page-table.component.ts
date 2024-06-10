@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { changePage } from 'src/store/pagination/pagination.action';
 import { IPaginationState } from 'src/store/pagination/pagination.state';
@@ -8,12 +8,17 @@ import { IPaginationState } from 'src/store/pagination/pagination.state';
   templateUrl: './page-table.component.html',
   styleUrls: ['./page-table.component.scss']
 })
-export class PageTableComponent implements OnInit {
+export class PageTableComponent implements OnInit, OnChanges {
   @Input() pagination!: IPaginationState | null;
   listIndex = 0;
   current = 1;
 
   constructor(private store: Store) { }
+  ngOnChanges(): void {
+    if(this.pagination && this.pagination.current === 1){
+      this.listIndex = 0;
+    }
+  }
 
   ngOnInit(): void {
   }
