@@ -1,7 +1,7 @@
 <div  class="row-layout-start-start">
 <div class="row-layout-space-between-start" style="width: 350px" > 
     <div  class="row-layout-start-start">
-        <label nz-checkbox [(ngModel)]="checked" style="margin-top: 5px; margin-right: 10px;"></label>
+        <label nz-checkbox [(ngModel)]="checked" (ngModelChange) = "onChecked($event)"style="margin-top: 5px; margin-right: 10px;"></label>
         <h2 class="filter-header">{{name}}:</h2>
     </div>
         <nz-slider style="width: 300px" [nzMarks]="marks"  nzIncluded [nzRange] = "true" [ngModel]="[min, max]" [nzTooltipVisible] = "'never'" [nzMax] = "200" [nzDisabled] = "!checked" (ngModelChange) = "changeValues($event)"></nz-slider>

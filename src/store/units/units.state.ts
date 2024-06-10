@@ -1,3 +1,4 @@
+import { IFilterState } from "src/models/filter";
 import { IUnit } from "src/models/units";
 
 export interface IAppState {
@@ -7,4 +8,6 @@ export interface IAppState {
 export interface IUnitState {
   units: Readonly<IUnit[]>;
   filteredunits: Readonly<IUnit[]>;
+  filter: IFilterState;
+
 }

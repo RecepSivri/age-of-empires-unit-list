@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { NzMarks } from 'ng-zorro-antd/slider';
+import { IFilter } from 'src/models/filter';
 
 @Component({
   selector: 'app-range-slider',
@@ -11,6 +12,7 @@ export class RangeSliderComponent implements OnInit {
   @Input() min!: number;
   @Input() name!: string;
   @Input() checked!: boolean;
+  @Output() sendFilter: EventEmitter<IFilter> = new EventEmitter<IFilter>();
   constructor() { }
 
   ngOnInit(): void {
@@ -31,12 +33,22 @@ export class RangeSliderComponent implements OnInit {
     }
   };
 
-  onChecked = (value: any) => {
-    this.checked = value.target.value;
+  onChecked = (value: boolean) => {
+    this.checked = value;
+    this.sendFilter.emit({
+      checked:  this.checked,
+      min: this.min,
+      max: this.max
+    });
   }
   
   changeValues = (values: number[]) => {
     this.min = values[0];
     this.max = values[1];
+    this.sendFilter.emit({
+      checked:  this.checked,
+      min: this.min,
+      max: this.max
+    });
   }
 }

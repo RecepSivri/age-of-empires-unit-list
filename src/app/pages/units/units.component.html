@@ -43,9 +43,9 @@
         
           <div class="filter-container"  style="margin-left: 50px;">
             <h1 class="filter-header">Costs</h1>
-            <app-range-slider style="width: 450px" [min] = "woodFilter.min" [max] = "woodFilter.max" [name] = "'Wood'" [checked] ="woodFilter.checked"></app-range-slider>
-            <app-range-slider style="width: 450px" [min] = "foodFilter.min" [max] = "foodFilter.max" [name] = "'Food'" [checked] ="foodFilter.checked"></app-range-slider>
-            <app-range-slider style="width: 450px" [min] = "goldFilter.min" [max] = "goldFilter.max" [name] = "'Gold'" [checked] ="goldFilter.checked"></app-range-slider>
+            <app-range-slider style="width: 450px" [min] = "woodFilter.min" [max] = "woodFilter.max" [name] = "'Wood'" [checked] ="woodFilter.checked" (sendFilter) = "getWoodFilter($event)"></app-range-slider>
+            <app-range-slider style="width: 450px" [min] = "foodFilter.min" [max] = "foodFilter.max" [name] = "'Food'" [checked] ="foodFilter.checked" (sendFilter) = "getFoodFilter($event)"></app-range-slider>
+            <app-range-slider style="width: 450px" [min] = "goldFilter.min" [max] = "goldFilter.max" [name] = "'Gold'" [checked] ="goldFilter.checked" (sendFilter) = "getGoldFilter($event)"></app-range-slider>
           </div>
     </div>
   

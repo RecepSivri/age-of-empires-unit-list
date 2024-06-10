@@ -5,7 +5,7 @@ import { NzMarks } from "ng-zorro-antd/slider";
 import { IFilter } from "src/models/filter";
 import { IColumn, IPaginationTable } from "src/models/table";
 import { IUnit } from "src/models/units";
-import { filterUnits } from "src/store/units/units.action";
+import { setAgeFilter, setFoodFilter, setGoldFilter, setWoodFilter } from "src/store/units/units.action";
 import { selectFilteredUnits } from "src/store/units/units.selector";
 
 @Component({
@@ -60,7 +60,7 @@ export class UnitsComponent implements OnInit {
   paginationParam: IPaginationTable = {
     current: 1,
     pageSize: 10,
-    pageListSize: 4
+    pageListSize: 5
   }
   $tableData = this.store.pipe(select(selectFilteredUnits));
   
@@ -89,29 +89,19 @@ export class UnitsComponent implements OnInit {
 
   selectFilter = (filter: string) => {
     this.currentFilter = filter;
-
-    switch(this.currentFilter) {
-      case 'all':
-        this.store.dispatch(filterUnits({filter: (data: Readonly<IUnit[]>): IUnit[] => {return [...data]}}))
-        break;
-      case 'dark':
-        this.filterDatas('dark')
-        break;
-      case 'feudal':
-        this.filterDatas('feudal')
-          break;
-      case 'castle':
-        this.filterDatas('castle')
-          break;
-      case 'imperial':
-        this.filterDatas('imperial')
-          break;
-    }
+    this.store.dispatch(setAgeFilter({age:  this.currentFilter }));
   }
 
-  filterDatas = (key: string) => {
-    this.store.dispatch(filterUnits({filter: (data: Readonly<IUnit[]>): IUnit[] => {return data.filter((item: IUnit) => {
-      return item.age.toLowerCase() === key;
-    })}}))
+  getWoodFilter = (woodFilter: IFilter) => {
+    this.store.dispatch(setWoodFilter({wood: woodFilter}));
   }
+
+  getFoodFilter = (foodFilter: IFilter) => {
+    this.store.dispatch(setFoodFilter({food: foodFilter}));
+  }
+
+  getGoldFilter = (goldFilter: IFilter) => {
+    this.store.dispatch(setGoldFilter({gold: goldFilter}));
+  }
+
 }
