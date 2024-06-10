@@ -1,29 +1,54 @@
 <div class="column-layout-start-center units-page full-width">
-    <div class="filter-container">
+  <div class="filter-container">
     <h1 class="filter-header">Ages</h1>
     <div class="row-layout-start-start filter-item-container">
-        <div [ngClass]="{ 'current-filter': currentFilter === 'all' }" (click) = "selectFilter('all')" class="ages-filter-item">
-            All
-        </div>
-        <div [ngClass]="{ 'current-filter': currentFilter === 'dark' }" (click) = "selectFilter('dark')" class="ages-filter-item">
-            Dark
-        </div>
-        <div [ngClass]="{ 'current-filter': currentFilter === 'feudal' }" (click) = "selectFilter('feudal')" class="ages-filter-item">
-            Feudal
-        </div>
-        <div [ngClass]="{ 'current-filter': currentFilter === 'castle' }" (click) = "selectFilter('castle')" class="ages-filter-item">
-            Castle
-        </div>
-        <div [ngClass]="{ 'current-filter': currentFilter === 'imperial' }" (click) = "selectFilter('imperial')" class="ages-filter-item">
-            Imperial
-        </div>
+      <div
+        [ngClass]="{ 'current-filter': currentFilter === 'all' }"
+        (click)="selectFilter('all')"
+        class="ages-filter-item"
+      >
+        All
+      </div>
+      <div
+        [ngClass]="{ 'current-filter': currentFilter === 'dark' }"
+        (click)="selectFilter('dark')"
+        class="ages-filter-item"
+      >
+        Dark
+      </div>
+      <div
+        [ngClass]="{ 'current-filter': currentFilter === 'feudal' }"
+        (click)="selectFilter('feudal')"
+        class="ages-filter-item"
+      >
+        Feudal
+      </div>
+      <div
+        [ngClass]="{ 'current-filter': currentFilter === 'castle' }"
+        (click)="selectFilter('castle')"
+        class="ages-filter-item"
+      >
+        Castle
+      </div>
+      <div
+        [ngClass]="{ 'current-filter': currentFilter === 'imperial' }"
+        (click)="selectFilter('imperial')"
+        class="ages-filter-item"
+      >
+        Imperial
+      </div>
     </div>
-    </div>
-    
+  </div>
+
+  <div class="filter-container">
+    <h1 class="filter-header">Costs</h1>
+    <input type="range" min="1" max="100" value="1" class="slider">
+  </div>
+
   <app-table
     [data]="$tableData | async"
     [column]="columns"
-    style="width: 80%"
-    [pagination] = "paginationParam"
+    style="width: 85%"
+    [pagination]="paginationParam"
   ></app-table>
 </div>
