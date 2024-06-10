@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { DomSanitizer } from "@angular/platform-browser";
 import { Store, select } from "@ngrx/store";
+import { NzMarks } from "ng-zorro-antd/slider";
+import { IFilter } from "src/models/filter";
 import { IColumn, IPaginationTable } from "src/models/table";
 import { IUnit } from "src/models/units";
 import { filterUnits } from "src/store/units/units.action";
@@ -14,6 +16,25 @@ import { selectFilteredUnits } from "src/store/units/units.selector";
 export class UnitsComponent implements OnInit {
 
   currentFilter: string = 'all'; 
+  woodFilter: IFilter = {
+    min: 0,
+    max: 200,
+    checked: false
+  }
+
+  foodFilter: IFilter = {
+    min: 0,
+    max: 200,
+    checked: false
+  }
+
+  goldFilter: IFilter = {
+    min: 0,
+    max: 200,
+    checked: false
+  }
+  
+
   returnImage = (value: string) => {
     const htmlString = `
       <div style="margin-top: 3px">
@@ -48,6 +69,21 @@ export class UnitsComponent implements OnInit {
     private sanitizer: DomSanitizer,
   ) {}
 
+  marks: NzMarks = {
+    0: {
+      style: {
+        color: '#ab9354'
+      },
+      label: '<strong>0</strong>'
+    },
+    100: {
+      style: {
+        color: '#ab9354'
+      },
+      label: '<strong>200</strong>'
+    }
+  };
+  
   ngOnInit(): void {
   }
 

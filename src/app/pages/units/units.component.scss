@@ -1,5 +1,5 @@
 .units-page {
-  margin-top: 100px;
+  margin-top: 50px;
   width: 100vw;
 }
 
@@ -8,7 +8,6 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    width: 85%;
     margin-bottom: 30px;
 }
 
@@ -40,38 +39,3 @@
 .current-filter {
     background-color: #bebe8c;
 }
-
-
-
-.slider {
-    -webkit-appearance: none;
-    width: 400px;
-    height: 20px;
-    background: #f6f6f6;
-    outline: none;
-    opacity: 0.9;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-    cursor: pointer;
-  }
-  
-  .slider:hover {
-    opacity: 1;
-  }
-  
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #ab9354;
-    transform: rotate(45deg);
-    cursor: pointer;
-  }
-  
-  .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background: #04AA6D;
-    cursor: pointer;
-  }

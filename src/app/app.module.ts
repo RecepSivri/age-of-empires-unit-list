@@ -14,6 +14,11 @@ import { BodyTableComponent } from "./components/table/body-table/body-table.com
 import { HeaderTableComponent } from "./components/table/header-table/header-table.component";
 import { paginationReducer } from "src/store/pagination/pagination.reducer";
 import { PageTableComponent } from './components/table/page-table/page-table.component';
+import { NzSliderModule } from 'ng-zorro-antd/slider';
+import { FormsModule } from "@angular/forms";
+import { RangeSliderComponent } from './components/range-slider/range-slider.component';
+import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,10 +29,14 @@ import { PageTableComponent } from './components/table/page-table/page-table.com
     BodyTableComponent,
     HeaderTableComponent,
     PageTableComponent,
+    RangeSliderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NzCheckboxModule,
+    FormsModule,
+    NzSliderModule,
     StoreModule.forRoot({ app: unitsReducer, pagination: paginationReducer }),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
