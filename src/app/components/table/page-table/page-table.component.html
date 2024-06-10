@@ -1,4 +1,4 @@
-<div *ngIf="pagination" class="row-layout-start-start pagination-container">
+<div *ngIf="data.length > 0 && pagination" class="row-layout-start-start pagination-container">
     <div (click) = "decrease()" class="page-item row-layout-center-center">{{'<'}}</div>
     <div *ngFor="let item of [].constructor(returnPageListSize((pagination.pageListSize * (listIndex +1)))); let i = index">
         <div [ngClass]="{ 'current-page': i +1 + (pagination.pageListSize * listIndex) === pagination.current}" (click) = "setPage(i +1 + (pagination.pageListSize * listIndex))" class="page-item row-layout-center-center">{{i +1 + (pagination.pageListSize * listIndex)}}</div>

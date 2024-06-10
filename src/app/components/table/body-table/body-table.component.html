@@ -1,4 +1,4 @@
-<div class="column-layout-start-start full-width background-color-table">
+<div *ngIf = "data.length > 0" class="column-layout-start-start full-width background-color-table">
   <div *ngFor="let item of data" class="full-width">
     <div class="row-layout-start-start full-width border-cell-item">
       <div
@@ -21,4 +21,9 @@
       </div>
     </div>
   </div>
+</div>
+
+
+<div *ngIf = "data.length === 0" class="row-layout-center-center full-width background-color-table no-data">
+    <div class="no-data-label">No Data</div>
 </div>

@@ -8,6 +8,7 @@ import { IColumn } from "src/models/table";
 })
 export class HeaderTableComponent implements OnInit {
   @Input() column: IColumn[];
+  @Input() data: any;
   constructor() {
     this.column = [];
   }

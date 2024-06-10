@@ -1,4 +1,4 @@
-<div class="table-header-background row-layout-start-center full-width">
+<div *ngIf="data.length > 0" class="table-header-background row-layout-start-center full-width">
   <div
     *ngFor="let col of column; let i = index"
     class="full-width row-layout-center-center header-cell"

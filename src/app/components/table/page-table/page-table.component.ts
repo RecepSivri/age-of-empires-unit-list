@@ -10,6 +10,7 @@ import { IPaginationState } from 'src/store/pagination/pagination.state';
 })
 export class PageTableComponent implements OnInit, OnChanges {
   @Input() pagination!: IPaginationState | null;
+  @Input() data: any;
   listIndex = 0;
   current = 1;
 
