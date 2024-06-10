@@ -2,7 +2,9 @@ import { Component, OnInit } from "@angular/core";
 import { DomSanitizer } from "@angular/platform-browser";
 import { Store, select } from "@ngrx/store";
 import { IColumn, IPaginationTable } from "src/models/table";
-import { selectFilteredUnits, selectUnits } from "src/store/units/units.selector";
+import { IUnit } from "src/models/units";
+import { filterUnits } from "src/store/units/units.action";
+import { selectFilteredUnits } from "src/store/units/units.selector";
 
 @Component({
   selector: "app-units",
@@ -51,5 +53,29 @@ export class UnitsComponent implements OnInit {
 
   selectFilter = (filter: string) => {
     this.currentFilter = filter;
+
+    switch(this.currentFilter) {
+      case 'all':
+        this.store.dispatch(filterUnits({filter: (data: Readonly<IUnit[]>): IUnit[] => {return [...data]}}))
+        break;
+      case 'dark':
+        this.filterDatas('dark')
+        break;
+      case 'feudal':
+        this.filterDatas('feudal')
+          break;
+      case 'castle':
+        this.filterDatas('castle')
+          break;
+      case 'imperial':
+        this.filterDatas('imperial')
+          break;
+    }
+  }
+
+  filterDatas = (key: string) => {
+    this.store.dispatch(filterUnits({filter: (data: Readonly<IUnit[]>): IUnit[] => {return data.filter((item: IUnit) => {
+      return item.age.toLowerCase() === key;
+    })}}))
   }
 }
