@@ -27,7 +27,6 @@ export class DetailComponent implements OnInit {
   }
 
   renderCost = (value: ICost) => {
-    console.log(value);
     const keys = Object.keys(value);
     const values = Object.values(value);
     let renderCosts: string[] = [];
