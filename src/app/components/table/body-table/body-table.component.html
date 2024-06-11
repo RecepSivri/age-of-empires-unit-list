@@ -1,6 +1,6 @@
 <div *ngIf = "data.length > 0" class="column-layout-start-start full-width background-color-table">
   <div *ngFor="let item of data" class="full-width">
-    <div class="row-layout-start-start full-width border-cell-item">
+    <div class="row-layout-start-start full-width border-cell-item" (click) = "rowClick(item)">
       <div
         *ngFor="let col of column; let i = index"
         class="full-width"

@@ -6,8 +6,9 @@ import { UnitsComponent } from "./pages/units/units.component";
 
 const routes: Routes = [
   { path: "", component: MainComponent },
-  { path: "detail", component: DetailComponent },
   { path: "units", component: UnitsComponent },
+  { path: "detail/:id", component: DetailComponent },
+  
 ];
 
 @NgModule({

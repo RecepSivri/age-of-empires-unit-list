@@ -1,1 +1,204 @@
-<p>detail works!</p>
+<div *ngIf="$units | async" class="full-width detail-container">
+  <div
+    *ngFor="let item of getUnitById($units | async)"
+    class="full-width column-layout-start-center"
+  >
+    <div class="unit-card row-layout-start-start">
+      <div class="full-width row-layout-start-start">
+        <div class="column-layout-start-start information-container">
+          <h1 class="unit-name">{{ item.name }}</h1>
+          <img
+            src="{{ '../../../assets/img/unit-icons/' + item.image + '.webp' }}"
+            width="256px"
+            height="256px"
+          />
+          <div *ngIf="item.description" class="info-box-item">
+            <img
+              style="margin-right: 5px"
+              src="../../../assets/img/property-icons/description.png"
+              width="16px"
+            />
+            <strong style="font-size: 20px">Description:</strong>
+            {{ item.description }}
+          </div>
+          <div *ngIf="item.expansion" class="info-box-item">
+            <img
+              style="margin-right: 5px"
+              src="../../../assets/img/property-icons/expansion.png"
+              width="16px"
+            />
+            <strong style="font-size: 20px">Expansion:</strong>
+            {{ item.expansion }}
+          </div>
+          <div *ngIf="item.age" class="info-box-item">
+            <img
+              style="margin-right: 5px"
+              src="../../../assets/img/property-icons/aoe-icon.webp"
+              width="16px"
+            />
+            <strong style="font-size: 20px">Age:</strong> {{ item.age }}
+          </div>
+          <div *ngIf="item.cost" class="info-box-item row-layout-start-start">
+            <img
+              style="margin-right: 5px"
+              src="../../../assets/img/property-icons/coin.png"
+              width="16px"
+            />
+            <strong style="font-size: 20px; margin-top:-2px">Cost:</strong>
+            <div
+              *ngFor="let cost of renderCost(item.cost)"
+              class="row-layout-start-start"
+            >
+              <div *ngIf="returnCostType(cost) === 'Food'"  class="row-layout-start-start cost-box">
+                <img
+                  style="margin-right: 5px"
+                  src="../../../assets/img/property-icons/food.webp"
+                  width="16px"
+                />
+                <div>{{cost}}</div>
+              </div>
+              <div *ngIf="returnCostType(cost) === 'Wood'"  class="row-layout-start-start cost-box">
+                <img
+                  style="margin-right: 5px"
+                  src="../../../assets/img/property-icons/wood.webp"
+                  width="16px"
+                />
+                <div>{{cost}}</div>
+              </div>
+              <div *ngIf="returnCostType(cost) === 'Gold'"  class="row-layout-start-start cost-box">
+                <img
+                  style="margin-right: 5px"
+                  src="../../../assets/img/property-icons/gold.webp"
+                  width="16px"
+                />
+                  <div>{{cost}}</div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="item.build_time" class="info-box-item">
+            <img
+              style="margin-right: 5px"
+              src="../../../assets/img/property-icons/sand-watch.png"
+              width="16px"
+            />
+            <strong style="font-size: 20px">Build Time:</strong>
+            {{ item.build_time }} Seconds
+          </div>
+          <div *ngIf="item.reload_time" class="info-box-item">
+            <img
+              style="margin-right: 5px"
+              src="../../../assets/img/property-icons/sand-watch.png"
+              width="16px"
+            />
+            <strong style="font-size: 20px">Reload Time:</strong>
+            {{ item.reload_time }} Seconds
+          </div>
+          <div *ngIf="item.attack_delay" class="info-box-item">
+            <img
+              style="margin-right: 5px"
+              src="../../../assets/img/property-icons/clock.png"
+              width="16px"
+            />
+            <strong style="font-size: 20px">Attact Delay:</strong>
+            {{ item.attack_delay }}
+          </div>
+          <div *ngIf="item.movement_rate" class="info-box-item">
+            <img
+              style="margin-right: 5px"
+              src="../../../assets/img/property-icons/speed.webp"
+              width="16px"
+            />
+            <strong style="font-size: 20px">Movement Rate:</strong>
+            {{ item.movement_rate }}
+          </div>
+        </div>
+      </div>
+      <div class="full-width row-layout-start-start">
+        <div class="column-layout-start-start information-container right-side">
+          <div *ngIf="item.line_of_sight" class="info-box-item">
+            <img
+              style="margin-right: 5px"
+              src="../../../assets/img/property-icons/sight.png"
+              width="16px"
+            />
+            <strong style="font-size: 20px">Line of Sight:</strong>
+            {{ item.line_of_sight }}
+          </div>
+          <div *ngIf="item.hit_points" class="info-box-item">
+            <img
+              style="margin-right: 5px"
+              src="../../../assets/img/property-icons/hit-points.webp"
+            />
+            <strong style="font-size: 20px">Hit Points:</strong>
+            {{ item.hit_points }}
+          </div>
+          <div *ngIf="item.range" class="info-box-item">
+            <img
+              style="margin-right: 5px"
+              src="../../../assets/img/property-icons/range.webp"
+            />
+            <strong style="font-size: 20px">Range:</strong> {{ item.range }}
+          </div>
+          <div *ngIf="item.attack" class="info-box-item">
+            <img
+              style="margin-right: 5px"
+              src="../../../assets/img/property-icons/attack.webp"
+            />
+            <strong style="font-size: 20px">Attact:</strong> {{ item.attack }}
+          </div>
+          <div *ngIf="item.armor" class="info-box-item">
+            <img
+              style="margin-right: 5px"
+              src="../../../assets/img/property-icons/melee-armor.webp"
+            />
+            <strong style="font-size: 20px">Armor:</strong> {{ item.armor }}
+          </div>
+          <div *ngIf="item.accuracy" class="info-box-item">
+            <img
+              style="margin-right: 5px"
+              src="../../../assets/img/property-icons/accuracy.png"
+              width="16px"
+            />
+            <strong style="font-size: 20px">Accuracy:</strong>
+            {{ item.accuracy }}
+          </div>
+          <div *ngIf="item.attack_bonus" class="info-box-item">
+            <img
+              style="margin-right: 5px"
+              src="../../../assets/img/property-icons/attack.webp"
+              width="16px"
+            />
+            <strong style="font-size: 20px">Attact Bonus:</strong>
+            {{ item.attack_bonus }}
+          </div>
+          <div *ngIf="item.blast_radius" class="info-box-item">
+            <img
+              style="margin-right: 5px"
+              width="16px"
+              src="../../../assets/img/property-icons/blast.png"
+            />
+            <strong style="font-size: 20px">Blast Radius:</strong>
+            {{ item.blast_radius }}
+          </div>
+          <div *ngIf="item.search_radius" class="info-box-item">
+            <img
+              style="margin-right: 5px"
+              width="16px"
+              src="../../../assets/img/property-icons/search.png"
+            />
+            <strong style="font-size: 20px">Search Radius:</strong>
+            {{ item.search_radius }}
+          </div>
+          <div *ngIf="item.armor_bonus" class="info-box-item">
+            <img
+              style="margin-right: 5px"
+              src="../../../assets/img/property-icons/pierce-armor.webp"
+            />
+            <strong style="font-size: 20px">Armor Bonus:</strong>
+            {{ item.armor_bonus }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

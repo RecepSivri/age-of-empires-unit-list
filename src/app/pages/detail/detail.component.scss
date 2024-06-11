@@ -1,0 +1,39 @@
+.detail-container {
+    margin-top: 80px;
+    width: 100vw;
+}
+
+.unit-card {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    background-color: #ab9354;
+    width: 50%;
+    height: 700px;
+}
+
+.information-container {
+    margin: 10px 10px 10px 10px; 
+}
+
+.unit-name {
+    color: black;
+    font-family: cursive;
+    font-size: 30px;
+    margin-left: 35px;
+}
+
+.info-box-item {
+    margin-top: 10px;
+    font-size: 17px;
+    font-family:fantasy
+}
+
+.right-side {
+    margin-top: 70px
+}
+
+.cost-box {
+    margin-left: 10px;
+}
