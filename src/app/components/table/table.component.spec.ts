@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { TableComponent } from "./table.component";
+import { provideMockStore } from "@ngrx/store/testing";
 
 describe("TableComponent", () => {
   let component: TableComponent;
@@ -9,6 +10,7 @@ describe("TableComponent", () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [TableComponent],
+      providers: [provideMockStore({})]
     }).compileComponents();
   });
 

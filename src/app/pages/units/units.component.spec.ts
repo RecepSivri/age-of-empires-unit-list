@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-
 import { UnitsComponent } from "./units.component";
+import { provideMockStore } from '@ngrx/store/testing';
 
 describe("UnitsComponent", () => {
   let component: UnitsComponent;
@@ -9,6 +9,7 @@ describe("UnitsComponent", () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [UnitsComponent],
+      providers: [provideMockStore({})]
     }).compileComponents();
   });
 

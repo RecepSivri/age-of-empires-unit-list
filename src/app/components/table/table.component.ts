@@ -22,11 +22,17 @@ export class TableComponent implements OnInit {
     
   }
   ngOnChanges(){
-    this.store.dispatch(setPagination({ current: this.pagination.current, pageListSize: this.pagination.pageListSize, pageSize: this.pagination.pageSize, filteredDatas: this.data }));
+    if(this.pagination){
+      this.store.dispatch(setPagination({ current: this.pagination.current, pageListSize: this.pagination.pageListSize, pageSize: this.pagination.pageSize, filteredDatas: this.data }));
+    }
+    
   }
   
 
   ngOnInit(): void {
-    this.store.dispatch(setPagination({ current: this.pagination.current, pageListSize: this.pagination.pageListSize, pageSize: this.pagination.pageSize, filteredDatas: this.data }));
+    if(this.pagination){
+      this.store.dispatch(setPagination({ current: this.pagination.current, pageListSize: this.pagination.pageListSize, pageSize: this.pagination.pageSize, filteredDatas: this.data }));
+    }
+    
   }
 }

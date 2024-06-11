@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PageTableComponent } from './page-table.component';
+import { provideMockStore } from '@ngrx/store/testing';
 
 describe('PageTableComponent', () => {
   let component: PageTableComponent;
@@ -8,7 +9,8 @@ describe('PageTableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PageTableComponent ]
+      declarations: [ PageTableComponent ],
+      providers: [provideMockStore({})]
     })
     .compileComponents();
   });
