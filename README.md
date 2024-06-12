@@ -10,11 +10,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
       
 <img width="1725" alt="Ekran Resmi 2024-06-12 10 07 54" src="https://github.com/RecepSivri/age-of-empires-unit-list/assets/16796421/cd9af8cc-8aa0-4f2a-bbb8-daf30b2a6a1d">
 
+<img width="1725" alt="Ekran Resmi 2024-06-12 10 07 78" src="https://github.com/RecepSivri/age-of-empires-unit-list/assets/16796421/c0b8df37-5d82-4601-a11d-4b28eb345cac">
+
 <img width="1725" alt="Ekran Resmi 2024-06-12 10 06 23" src="https://github.com/RecepSivri/age-of-empires-unit-list/assets/16796421/a3a0d889-70b7-401d-8e2b-bfd7104c4645">
 
-
-
-![Ekran Resmi 2024-06-12 10 07 54](https://github.com/RecepSivri/age-of-empires-unit-list/assets/16796421/cd9af8cc-8aa0-4f2a-bbb8-daf30b2a6a1d)
+https://github.com/RecepSivri/age-of-empires-unit-list/assets/16796421/c0b8df37-5d82-4601-a11d-4b28eb345cac
 
 
 
