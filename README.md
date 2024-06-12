@@ -4,10 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Application View:
 
-      Main Page:
-      <img width="1721" alt="Ekran Resmi 2024-06-12 10 06 59" src="https://github.com/RecepSivri/age-of-empires-unit-list/assets/16796421/69531ee2-4158-41df-ac8c-1334239838ba">
+<img width="1721" alt="Ekran Resmi 2024-06-12 10 06 59" src="https://github.com/RecepSivri/age-of-empires-unit-list/assets/16796421/69531ee2-4158-41df-ac8c-1334239838ba">
       Units Page:
-      ![Ekran Resmi 2024-06-12 10 07 41](https://github.com/RecepSivri/age-of-empires-unit-list/assets/16796421/3fa428da-568b-4e68-8272-e8fa8ce04d31)
+![Ekran Resmi 2024-06-12 10 07 41](https://github.com/RecepSivri/age-of-empires-unit-list/assets/16796421/3fa428da-568b-4e68-8272-e8fa8ce04d31)
       Unit Table:
       ![Ekran Resmi 2024-06-12 10 07 54](https://github.com/RecepSivri/age-of-empires-unit-list/assets/16796421/bc5edcc3-966a-438d-b0f0-1a8d5353aee5)
       Detail Page:
